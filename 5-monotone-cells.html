@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Monotone Cells | Thesis</title>
+  <meta name="description" content="Hollie Baker’s thesis" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Monotone Cells | Thesis" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Hollie Baker’s thesis" />
+  <meta name="github-repo" content="holliebaker/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Monotone Cells | Thesis" />
+  
+  <meta name="twitter:description" content="Hollie Baker’s thesis" />
+  
+
+<meta name="author" content="Hollie" />
+
+
+<meta name="date" content="2023-11-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="4.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"/>
+<link rel="next" href="5.1-two-dimensional-semi-monotone-sectors.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Thesis: CAD with monotone cells</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Cylindrical algebraic decompositions with monotone cells</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1.1-things-to-explain.html"><a href="1.1-things-to-explain.html"><i class="fa fa-check"></i><b>1.1</b> Things to explain</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-bits-and-pieces.html"><a href="2-bits-and-pieces.html"><i class="fa fa-check"></i><b>2</b> Bits and Pieces</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><a href="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><i class="fa fa-check"></i><b>2.1</b> Definitions that don’t quite fit anywhere else.</a></li>
+<li class="chapter" data-level="2.2" data-path="2.2-definition-of-the-cad.html"><a href="2.2-definition-of-the-cad.html"><i class="fa fa-check"></i><b>2.2</b> Definition of the CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-intro.html"><a href="3-intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
+<li class="chapter" data-level="4" data-path="4-quasi-affine-cells.html"><a href="4-quasi-affine-cells.html"><i class="fa fa-check"></i><b>4</b> Quasi-affine cells</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="4.1-computing-the-smooth-2-dimensional-locus-of-v.html"><a href="4.1-computing-the-smooth-2-dimensional-locus-of-v.html"><i class="fa fa-check"></i><b>4.1</b> Computing the smooth 2-dimensional locus of <span class="math inline">\(V\)</span></a></li>
+<li class="chapter" data-level="4.2" data-path="4.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><a href="4.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><i class="fa fa-check"></i><b>4.2</b> Ensuring that every cell is the graph of a quasi-affine map</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="5-monotone-cells.html"><a href="5-monotone-cells.html"><i class="fa fa-check"></i><b>5</b> Monotone Cells</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="5.1-two-dimensional-semi-monotone-sectors.html"><a href="5.1-two-dimensional-semi-monotone-sectors.html"><i class="fa fa-check"></i><b>5.1</b> Two-dimensional semi-monotone sectors</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="5.1-two-dimensional-semi-monotone-sectors.html"><a href="5.1-two-dimensional-semi-monotone-sectors.html#semi-monotone-sets"><i class="fa fa-check"></i><b>5.1.1</b> Two-dimensional semi-monotone sets</a></li>
+<li class="chapter" data-level="5.1.2" data-path="5.1-two-dimensional-semi-monotone-sectors.html"><a href="5.1-two-dimensional-semi-monotone-sectors.html#sec:lagrange-refinement"><i class="fa fa-check"></i><b>5.1.2</b> Finding the critical points of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span></a></li>
+<li class="chapter" data-level="5.1.3" data-path="5.1-two-dimensional-semi-monotone-sectors.html"><a href="5.1-two-dimensional-semi-monotone-sectors.html#sec:sub-cad"><i class="fa fa-check"></i><b>5.1.3</b> Working with sub-decompositions above a 0-cell</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="5.2-two-dimensional-monotone-sections.html"><a href="5.2-two-dimensional-monotone-sections.html"><i class="fa fa-check"></i><b>5.2</b> Two-dimensional monotone sections</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="5.2-two-dimensional-monotone-sections.html"><a href="5.2-two-dimensional-monotone-sections.html#case-1-2-le-j-le-alpha---1"><i class="fa fa-check"></i><b>5.2.1</b> Case 1: <span class="math inline">\(2 \le j \le \alpha - 1\)</span></a></li>
+<li class="chapter" data-level="5.2.2" data-path="5.2-two-dimensional-monotone-sections.html"><a href="5.2-two-dimensional-monotone-sections.html#case-2-alpha-1-le-j-le-n"><i class="fa fa-check"></i><b>5.2.2</b> Case 2: <span class="math inline">\(\alpha + 1 \le j \le n\)</span></a></li>
+<li class="chapter" data-level="5.2.3" data-path="5.2-two-dimensional-monotone-sections.html"><a href="5.2-two-dimensional-monotone-sections.html#critical-points-of-the-top-and-bottom-of-c"><i class="fa fa-check"></i><b>5.2.3</b> Critical points of the top and bottom of <span class="math inline">\(C\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5.3-implementation-details.html"><a href="5.3-implementation-details.html"><i class="fa fa-check"></i><b>5.3</b> Implementation Details</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="5.3-implementation-details.html"><a href="5.3-implementation-details.html#algorithm"><i class="fa fa-check"></i><b>5.3.1</b> Algorithm</a></li>
+<li class="chapter" data-level="5.3.2" data-path="5.3-implementation-details.html"><a href="5.3-implementation-details.html#discussion-on-qepcad-sample-points"><i class="fa fa-check"></i><b>5.3.2</b> Discussion on QEPCAD sample points</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="5.4-computing-the-refinements.html"><a href="5.4-computing-the-refinements.html"><i class="fa fa-check"></i><b>5.4</b> Computing the refinements</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-frontier-condition.html"><a href="6-frontier-condition.html"><i class="fa fa-check"></i><b>6</b> Frontier Condition</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6.1-geteral-frontier-algorithm.html"><a href="6.1-geteral-frontier-algorithm.html"><i class="fa fa-check"></i><b>6.1</b> Geteral Frontier Algorithm</a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-lazard-3d.html"><a href="6.2-lazard-3d.html"><i class="fa fa-check"></i><b>6.2</b> Lazard 3d</a></li>
+<li class="chapter" data-level="6.3" data-path="6.3-geteralisation-of-lazard.html"><a href="6.3-geteralisation-of-lazard.html"><i class="fa fa-check"></i><b>6.3</b> Geteralisation of Lazard</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-notation.html"><a href="7-notation.html"><i class="fa fa-check"></i><b>7</b> Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="monotone-cells" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Monotone Cells<a href="5-monotone-cells.html#monotone-cells" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Now we have a CAD <span class="math inline">\(\cal D\)</span> such that each 2-dimensional cell is the graph of a quasi-affine map, let us return to <span class="citation">(Basu, Gabrielov, and Vorobjov <a href="#ref-bgv15" role="doc-biblioref">2015</a> Theorem 3.20)</span> and discuss how to obtain monotone cells.</p>
+<div class="definition">
+<p><span id="def:sub-cad" class="definition"><strong>Definition 5.1  </strong></span>Let <span class="math inline">\(\cal D\)</span> be a CAD of <span class="math inline">\(\mathbb{R}^n\)</span> and suppose that <span class="math inline">\(c = \{ x_1 = c_1,\dots,x_k = c_k \}\)</span> is a <span class="math inline">\(0\)</span>-dimensional section cell in the decomposition induced by <span class="math inline">\(\cal D\)</span> on <span class="math inline">\(\mathbb{R}^k\)</span>.
+By <span class="citation">(Basu, Gabrielov, and Vorobjov <a href="#ref-bgv15" role="doc-biblioref">2015</a> Remark 3.8)</span>, the set of all cells of <span class="math inline">\(\cal D\)</span> contained in the effing coordinate subspace
+<span class="math display">\[
+\{ x_1=c_1,\dots,x_k=c_k \}
+\]</span>
+forms a cylindrical decomposition of <span class="math inline">\(\mathbb{R}^{n-k}\)</span>. This decomposition will be called the <em>sub-decomposition</em> of <span class="math inline">\(\cal D\)</span> above <span class="math inline">\(c\)</span>, and <span class="math inline">\(c\)</span> the <em>base cell</em> of the sub-decomposition.</p>
+</div>
+<p>The construction proceeds by induction on <span class="math inline">\(n\)</span>.</p>
+<ul>
+<li><p>The base case, <span class="math inline">\(n=1\)</span> is straightforward, since <span class="math inline">\((0)\)</span> and <span class="math inline">\((1)\)</span>-cells are already monotone.</p></li>
+<li><p>When <span class="math inline">\(n&gt;1\)</span>, consider each cell <span class="math inline">\(C\)</span> of <span class="math inline">\(\cal D\)</span> and let <span class="math inline">\(C&#39;&#39; := \operatorname{proj}op{1}(C)\)</span></p>
+<ul>
+<li><p>If <span class="math inline">\(\dim(C&#39;&#39;) = 0\)</span>, apply the inductive hypothesis to the sub-decomposition of <span class="math inline">\(\cal D\)</span> above <span class="math inline">\(C&#39;&#39;\)</span>.</p></li>
+<li><p>Otherwise, <span class="math inline">\(C\)</span> has index <span class="math inline">\(\{1,i_2,\dots,i_n\} \in \{0,1\}^n\)</span>. Let <span class="math inline">\(\alpha\)</span> be the smallest among <span class="math inline">\(\{2,\dots,n\}\)</span> such that <span class="math inline">\(i_\alpha = 1\)</span>.
+Then <span class="math inline">\(C&#39; := \operatorname{proj}op{\alpha}(C)\)</span> is a 2-dimensional sector cell and <span class="math inline">\(C\)</span> is the graph of a quasi-affine map
+<span class="math display">\[
+\mathbb{f} = (f_1,\dots,f_{n-2}) : {\operatorname{span} \{x_1,x_\alpha\}} \to {\operatorname{span} \{x_2,\ldots,x_{\alpha - 1}, x_{\alpha+1},\ldots,x_n\}}.
+\]</span>
+Since <span class="math inline">\(\mathbb{f}\)</span> is quasi-affine, each component <span class="math inline">\(f_j : {\operatorname{span} \{x_1,x_\alpha\}} \to {\operatorname{span} \{x_j\}}\)</span> is quasi-affine, too.</p>
+<p>Let <span class="math inline">\(X \subset {\operatorname{span} \{x_1,x_\alpha\}}\)</span>. By <span class="citation">(Basu, Gabrielov, and Vorobjov <a href="#ref-bgv15" role="doc-biblioref">2015</a>, Lemma 3.18)</span>, there exists a refinement of the CAD of <span class="math inline">\({\operatorname{span} \{x_1,x_\alpha\}}\)</span>, obtained by intersecting <span class="math inline">\(X\)</span> with straight lines and half-planes of the kind
+<span class="math display">\[
+\{x_1 &lt; c\}, \{x_1 = c\}, \{x_1 &gt; c\}
+\]</span>
+where <span class="math inline">\(c \in \mathbb{R}\)</span>, such that <span class="math inline">\(X\)</span> is a union of semi-monotone sets <span class="math inline">\(B\)</span> and <span class="math inline">\(f_j\vert_B\)</span> is a monotone function.
+By <span class="citation">(Basu, Gabrielov, and Vorobjov <a href="#ref-bgv15" role="doc-biblioref">2015</a> Lemma 3.11)</span>, refinements of this kind preserve the cylindrical structure of <span class="math inline">\(\cal D\)</span>.</p></li>
+</ul></li>
+</ul>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references hanging-indent">
+<div id="ref-bgv15">
+<p>Basu, Saugata, Andrei Gabrielov, and Nicolai Vorobjov. 2015. “Triangulations of Monotone Families I: Two-Dimensional Families.” <em>Proceedings of the London Mathematical Society</em> 111 (5): 1013–51.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="4.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="5.1-two-dimensional-semi-monotone-sectors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.bath.ac.uk/hb581/thesis/edit/master/03-2-monotone-cells.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

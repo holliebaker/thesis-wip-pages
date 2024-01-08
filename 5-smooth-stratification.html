@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Smooth Stratification | Thesis</title>
+  <meta name="description" content="Hollie Baker’s thesis" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Smooth Stratification | Thesis" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Hollie Baker’s thesis" />
+  <meta name="github-repo" content="holliebaker/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Smooth Stratification | Thesis" />
+  
+  <meta name="twitter:description" content="Hollie Baker’s thesis" />
+  
+
+<meta name="author" content="Hollie" />
+
+
+<meta name="date" content="2024-01-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="4-intro.html"/>
+<link rel="next" href="6-quasi-affine-cells.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Thesis: CAD with monotone cells</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Cylindrical algebraic decompositions with monotone cells</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1.1-things-to-explain.html"><a href="1.1-things-to-explain.html"><i class="fa fa-check"></i><b>1.1</b> Things to explain</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-bits-and-pieces.html"><a href="2-bits-and-pieces.html"><i class="fa fa-check"></i><b>2</b> Bits and Pieces</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><a href="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><i class="fa fa-check"></i><b>2.1</b> Definitions that don’t quite fit anywhere else.</a></li>
+<li class="chapter" data-level="2.2" data-path="2.2-definition-of-the-cad.html"><a href="2.2-definition-of-the-cad.html"><i class="fa fa-check"></i><b>2.2</b> Definition of the CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-background-cad.html"><a href="3-background-cad.html"><i class="fa fa-check"></i><b>3</b> Background: CAD</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="3-background-cad.html"><a href="3-background-cad.html#constructing-a-cad"><i class="fa fa-check"></i><b>3.0.1</b> Constructing a CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-intro.html"><a href="4-intro.html"><i class="fa fa-check"></i><b>4</b> Introduction</a></li>
+<li class="chapter" data-level="5" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html"><i class="fa fa-check"></i><b>5</b> Smooth Stratification</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html#description-of-the-algorithm"><i class="fa fa-check"></i><b>5.0.1</b> Description of the algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-quasi-affine-cells.html"><a href="6-quasi-affine-cells.html"><i class="fa fa-check"></i><b>6</b> Quasi-affine cells</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><a href="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><i class="fa fa-check"></i><b>6.1</b> Computing the smooth 2-dimensional locus of <span class="math inline">\(V\)</span></a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><a href="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><i class="fa fa-check"></i><b>6.2</b> Ensuring that every cell is the graph of a quasi-affine map</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-monotone-cells.html"><a href="7-monotone-cells.html"><i class="fa fa-check"></i><b>7</b> Monotone Cells</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html"><i class="fa fa-check"></i><b>7.1</b> Two-dimensional semi-monotone sectors</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#semi-monotone-sets"><i class="fa fa-check"></i><b>7.1.1</b> Two-dimensional semi-monotone sets</a></li>
+<li class="chapter" data-level="7.1.2" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:lagrange-refinement"><i class="fa fa-check"></i><b>7.1.2</b> Finding the critical points of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:sub-cad"><i class="fa fa-check"></i><b>7.1.3</b> Working with sub-decompositions above a 0-cell</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html"><i class="fa fa-check"></i><b>7.2</b> Two-dimensional monotone sections</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-1-2-le-j-le-alpha---1"><i class="fa fa-check"></i><b>7.2.1</b> Case 1: <span class="math inline">\(2 \le j \le \alpha - 1\)</span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-2-alpha-1-le-j-le-n"><i class="fa fa-check"></i><b>7.2.2</b> Case 2: <span class="math inline">\(\alpha + 1 \le j \le n\)</span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#critical-points-of-the-top-and-bottom-of-c"><i class="fa fa-check"></i><b>7.2.3</b> Critical points of the top and bottom of <span class="math inline">\(C\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html"><i class="fa fa-check"></i><b>7.3</b> Implementation Details</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html#algorithm"><i class="fa fa-check"></i><b>7.3.1</b> Algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="7.4-computing-the-refinements.html"><a href="7.4-computing-the-refinements.html"><i class="fa fa-check"></i><b>7.4</b> Computing the refinements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-frontier-condition.html"><a href="8-frontier-condition.html"><i class="fa fa-check"></i><b>8</b> Frontier Condition</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="8.1-geteral-frontier-algorithm.html"><a href="8.1-geteral-frontier-algorithm.html"><i class="fa fa-check"></i><b>8.1</b> Geteral Frontier Algorithm</a></li>
+<li class="chapter" data-level="8.2" data-path="8.2-lazard-3d.html"><a href="8.2-lazard-3d.html"><i class="fa fa-check"></i><b>8.2</b> Lazard 3d</a></li>
+<li class="chapter" data-level="8.3" data-path="8.3-geteralisation-of-lazard.html"><a href="8.3-geteralisation-of-lazard.html"><i class="fa fa-check"></i><b>8.3</b> Geteralisation of Lazard</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-notation.html"><a href="9-notation.html"><i class="fa fa-check"></i><b>9</b> Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="smooth-stratification" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Smooth Stratification<a href="5-smooth-stratification.html#smooth-stratification" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We now turn our attention to an algorithm for computing a smooth stratification of a semialgebraic set. A smooth stratification is a partition of a semialgebrac set into smooth manifolds. <span class="citation">(Whitney <a href="#ref-whitney1965" role="doc-biblioref">1965</a>)</span> proved that every complex (and real) analytic variety admits a smooth stratification. Later, <span class="citation">(Thom <a href="#ref-thom1969" role="doc-biblioref">1969</a>)</span> proved that every analytic set admits a smooth stratification and <span class="citation">(Lê Loi and others <a href="#ref-le2010" role="doc-biblioref">2010</a>)</span> proved that any set definable in an O-minimal structure also admits a Whitney stratification.</p>
+<p>In this section, an algorithm due to <span class="citation">(Gabrielov and Vorobjov <a href="#ref-gv1995" role="doc-biblioref">1995</a>)</span> for computing a basic weak stratification of an elementary semi-pfaffian set, such that each of the strata is “nicely defined” will be presented.</p>
+<div class="{,definition}">
+<p>Let <span class="math inline">\(X \subset \mathbb{R}^n\)</span> be a semianalytic set. <span class="math inline">\(X\)</span> is nonsingular and has dimension <span class="math inline">\(k\)</span> at a point <span class="math inline">\(x_0 \in X\)</span> if there exist real analytic functions <span class="math display">\[
+h_1,\ldots,h_{n-k}
+\]</span>
+defined in an open set <span class="math inline">\(U\)</span> containing <span class="math inline">\(x_0\)</span> such that
+<span class="math display">\[
+dh_1(x_0) \ne 0 \land \cdots \land  dh_{n-k}(x_0) \ne 0
+\]</span>
+and
+<span class="math display">\[
+X \cap U = \{ x \in U \mid h_1(x) = 0 \land \cdots \land h_{n-k}(x) = 0 \}
+\]</span>
+Let <span class="math inline">\(Y \subset \mathbb{R}^n\)</span> be a semi-pfaffian set.
+<span class="math inline">\(X \subset Y\)</span> is called effectively nonsingular (of dimension <span class="math inline">\(k\)</span>) if functions <span class="math inline">\(h_1,\ldots,h_{n-k}\)</span> belong to the same pfaffian chain as the functions defining <span class="math inline">\(Y\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definition 5.1  </strong></span>A basic weak stratification of a semi-pfaffian set <span class="math inline">\(X \subset \mathbb{R}^n\)</span> is a partition of <span class="math inline">\(X\)</span> into a finite number of non-singular manifolds <span class="math inline">\(X_k, 0 \le k \le n\)</span> where each <span class="math inline">\(X_k\)</span> is effectively nonsingularand has codimension <span class="math inline">\(k\)</span>.</p>
+</div>
+<div id="description-of-the-algorithm" class="section level3 hasAnchor" number="5.0.1">
+<h3><span class="header-section-number">5.0.1</span> Description of the algorithm<a href="5-smooth-stratification.html#description-of-the-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We now present the algorithm from <span class="citation">Gabrielov and Vorobjov (<a href="#ref-gv1995" role="doc-biblioref">1995</a>)</span> as it is applied to semialgebraic sets. Since polynomials are a sub-class of Pfaffian functions, the algorithm can be applied directly to semialgebraic sets. However, in the original form, a bound on the number of partial derivatives is computed. For the semialgebraic case, we simply need to take the degree of polynomials defining the semialgebraic set.</p>
+<div class="{,definition}">
+<p>Let <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a polynomial and let <span class="math inline">\((m_1,\ldots,m_n) \subset \mathbb{Z}_{\ge 0}^n\)</span> be a multi-index of its partial derivative. I.e., we write
+<span class="math display">\[
+\partial^{(m_1,\ldots,m_n)}
+\]</span>
+to mean
+<span class="math display">\[
+\dfrac{\partial^{m_1} f}{\partial x_1} \cdots \dfrac{\partial^{m_n} f}{\partial x_n}.
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 5.2  </strong></span>We define the partial differential operator <span class="math inline">\(\partial_{\mathbf{h}, \mathbf{i}, j} f\)</span> (where the argument <span class="math inline">\(f\)</span> is a polynomial) as the determinant
+<span class="math display">\[
+\det\begin{pmatrix}\dfrac{\partial h_{1}}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial h_{1}}{\partial x_{i_{k}}} &amp; \dfrac{\partial h_{1}}{\partial x_{j}}\\
+ &amp; \vdots\\
+\dfrac{\partial h_{k}}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial h_{k}}{\partial x_{i_{k}}} &amp; \dfrac{\partial h_{k}}{\partial x_{j}}\\
+\dfrac{\partial f}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial f}{\partial x_{i_{k}}} &amp; \dfrac{\partial f}{\partial x_{j}}
+\end{pmatrix}.
+\]</span>
+We write <span class="math inline">\(\partial^m_{\mathbf{h}, \mathbf{i}, j}\)</span> to mean the <span class="math inline">\(m\)</span>-th iteration of <span class="math inline">\(\partial_{\mathbf{h}, \mathbf{i}, j}\)</span>.</p>
+</div>
+<p>We proceed by induction on <span class="math inline">\(i_0\)</span>.</p>
+<ul>
+<li><p>Base case: <span class="math inline">\(i_0 = n\)</span>, return immediately.</p></li>
+<li><p>Recursive case:</p>
+<ul>
+<li><p>Initialise <span class="math display">\[X&#39; := X.\]</span></p></li>
+<li><p>Consider each multi-index <span class="math inline">\(\mathbf{m} = (i_n,\ldots,i_{k+1},j} \subset \mathbb{Z}_{\ge 0)^{n-k} \times \{1,\ldots,s\}\)</span> in ascending lexicographical order, beginning with <span class="math display">\[
+(0,\ldots,0,1,1).
+\]</span></p></li>
+</ul>
+<p>Index <span class="math inline">\((i_n,\ldots,i_1,i_0)\)</span> has the following property:
+<span class="math display">\[
+M_{i_0} \preceq (i_n,\ldots,i_1) \preceq (0,\ldots,1), M_{i_0} = \def(f_i).
+\]</span></p>
+<ul>
+<li><p>Let <span class="math inline">\((\mathbf{J}, h_k) \in \mathbf{G}\)</span> such that <span class="math display">\[
+  \mathbf{J} = (0, \ldots, 0, i_{\ell} - 1, i_{\ell - 1}, \ldots, i_{k+1}).
+  \]</span></p></li>
+<li><p>Compute
+<span class="math display">\[
+  s_k := \partial_{(h_1,\ldots,h_k), (i_1,\ldots,i_k), i_\all} h_k
+  \]</span></p></li>
+<li><p>Define
+<span class="math display">\[
+  Y_k := \{ \mathbf{x} \in X&#39; \mid s_k(\mathbf{x}) \ne 0 \}
+  \]</span>
+(Ntoe <span class="math inline">\(h_1(\mathbf{x}) = 0\)</span> for all <span class="math inline">\(\mathbf{x} \in Y_k\)</span>.)</p></li>
+<li><p>Define
+<span class="math display">\[
+  U_k := \{ \mathbf{x} \in \mathbb{R}^n \mid h_k(\mathbf{x}) = 0, s_k(\mathbf{x} \ne 0, g_1(\mathbf{x}) &gt; 0 , \ldots, g_l(\mathbf{}) &gt; 0 \},
+  \]</span>
+a nonsingular subset of <span class="math inline">\(\mathbb{R}^n\)</span> having codimension <span class="math inline">\(k-1\)</span></p></li>
+<li><p>If <span class="math inline">\(Y_k\)</span> is an open subset of <span class="math inline">\(U_k\)</span>, then <span class="math inline">\(Y_k\)</span> is nonsingular of codimension <span class="math inline">\(k-1\)</span>.</p>
+<ul>
+<li><p>Update <span class="math display">\[X_k := X_k \cup Y_k.\]</span></p></li>
+<li><p>Add polynomial <span class="math inline">\(s_k\)</span>, i.e.,
+<span class="math display">\[
+\mathbf{G} := \mathbf{G} \cup \{ ((i_\ell,\ldots,i_1), s_k) \}
+\]</span></p></li>
+</ul></li>
+<li><p>Otherwise, <span class="math inline">\(Y_k\)</span> is not smooth. Call recursively
+<span class="math display">\[
+  Stratify((k+1, \mathbf{G}, (i_\ell,i_k,\ldots,i_1,0), (s_k,h_k,\ldots,h_1,0), \mathbf{K})
+  \]</span></p></li>
+<li><p>Update
+<span class="math display">\[
+  X&#39; := \{ \mathbf{x} \in X&#39; \mid s_k(\mathbf{x}) = 0 \},
+  \]</span>
+a proper (possibly empty) subset of old <span class="math inline">\(X&#39;\)</span>.</p></li>
+<li><p>If <span class="math inline">\(X&#39; = \emptyset\)</span>, return. Otherwise, continue with the next index with respect to lexicographical order.</p></li>
+</ul></li>
+</ul>
+<hr />
+<p>Let <span class="math inline">\(X \subset \mathbb{R}^n := \{ f_1 = 0 \land \cdots \land f_k = 0 \land g_1 &gt; 0 \land \cdots \land g_l &gt; 0 \}\)</span> be a semialgebraic set. We first apply some pre-processing to the polynomials defining <span class="math inline">\(X\)</span>. Let <span class="math display">\[
+\mathbf{G} := ((0,\ldots,0,1), f_1),\ldots, ((0,\ldots,0,s),f_s)).
+\]</span>
+Then the algorithm is called as follows
+<span class="math display">\[
+$\cal{X} = \rm{tratify(0, \mathbf{G}, (0), (0), (g_1,\ldots,g_t))$.
+\]</span></p>
+A couple of shortcuts can be taken in the implementation to make the code simpler and more efficient.
+First, suppose that we are considering index
+<span class="math display">\[
+(0,\ldots,0,i_\ell,\ldots,i_{k+1},i_k,\ldots,i_1,i_0).\]</span>
+Partial differentials with index lexicographically less than <span class="math inline">\((i_{k+1},0,\ldots,0)\)</span> have been computed on a previous round of induction and were passed in the argument <span class="math inline">\(\mathbf{G}\)</span>.
+Furthermore, the function <span class="math inline">\(h_k\)</span>, having index
+<span class="math display">\[
+(0,\ldots,0,i_{\ell -1},\ldots,i_0)
+\]</span>
+has already been computed, so it can be taken directly from the list <span class="math inline">\(\mathbf{G}\)</span>.
+In fact, there is a convenient way to find the function with index <span class="math inline">\((0,\ldots,0,i_\ell - 1, \ldots,i_1,i_0)\)</span>. Let us first illustrate this with an example. Let <span class="math inline">\(M = (1,2,2)\)</span> and consider the lexicographically ordered list of indices
+<span class="math display">\[\begin{matrix}
+L_1 :=\ &amp;  (0,0,0),&amp;(0,0,1),&amp;(0,0,2),&amp;(0,1,0),&amp;(0,1,1),&amp;(0,1,2),&amp;(1,0,0),&amp;(1,0,1)&amp;\ldots\\
+L_2 := \ &amp; &amp; (0,0,0),&amp;(0,0,1),&amp;(0,0,0),&amp;(0,0,1),&amp;(0,0,2),&amp;(0,0,0),&amp;(0,0,1)&amp;\ldots.\\
+\end{matrix}\]</span>
+<p>Observe that for indices <span class="math inline">\((0,0,1)\)</span>, <span class="math inline">\((0,1,0)\)</span> and <span class="math inline">\((1,0,0)\)</span> in <span class="math inline">\(L_1\)</span>, the corresponding element in <span class="math inline">\(L_2\)</span> is <span class="math inline">\((0,0,0)\)</span> and the corresponding elements for subsequent indices are those in the lexicographical order.
+I.e., we see that the index of <span class="math inline">\(h_k\)</span> “chases after” the index of <span class="math inline">\(s_k\)</span>, resetting each time <span class="math inline">\(\ell\)</span> is incremented.
+More precisely, when <span class="math inline">\(\ell = 1\)</span> and <span class="math inline">\(s_1\)</span> has index <span class="math inline">\((0,\ldots,0,i),i&gt;0\)</span>, $h_1 has index <span class="math inline">\((0,\ldots,0,i-1)\)</span>. I.e., our initial “chase index” is the previous element in the list. When <span class="math inline">\(\ell\)</span> is incremented, we need to return to the first element in the list, <span class="math inline">\((0,\ldots,0)\)</span> and proceed lexicographically through the indices until <span class="math inline">\(\ell\)</span> is incremented again, at which point we return to the beginning of the list. This gives us the property that when <span class="math inline">\(h_k\)</span> has index <span class="math inline">\((0,\ldots,0,i_\ell,i_{\ell-1},\ldots,i_1)\)</span>, <span class="math inline">\(h_1\)</span> will have index <span class="math inline">\((0,\ldots,0,i_\ell - 1,i_{\ell - 1},\ldots,i_1)\)</span> while only requiring two very basic list operations: get the next element and return to the beginning. In the example, we considered only one polynomial. To extend to multiple polynomials, since each will have a different <span class="math inline">\(M\)</span>, we need to keep a separate “chase list” for each one.</p>
+<p>Since the program has been implemented in QEPCAD, which utilises linked lists, it was important to ensure that appending to the end of the list is as efficient as possible. To avoid <span class="math inline">\(O(n)\)</span> insertion complexity, we keep a pointer to the last-but-one element in the list, i.e., suppose <span class="math inline">\(L = (a_1,(\ldots,(a_{r-1},(a_r,(\rm{NIL})))\ldots)\)</span> then <span class="math inline">\(L_{\rm{append}} = (a_{r-1},(a_r,(\rm{NIL})))\)</span>. Then, if we wish to append <span class="math inline">\(b\)</span> to the end of <span class="math inline">\(L\)</span>, we simply need to set the reductum of <span class="math inline">\(L_{\rm{append}}\)</span> to <span class="math inline">\((a_r,(b,(NIL)))\)</span>.</p>
+<p>Secondly, observe that only the last row and last column in the <span class="math inline">\((k\times k\)</span>-matrix for the partial differential operater
+<span class="math display">\[
+\partial_{\mathbf{h},\mathbf{i},j} f = \det\begin{pmatrix}\dfrac{\partial h_{1}}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial h_{1}}{\partial x_{i_{k}}} &amp; \dfrac{\partial h_{1}}{\partial x_{j}}\\
+ &amp; \vdots\\
+\dfrac{\partial h_{k}}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial h_{k}}{\partial x_{i_{k}}} &amp; \dfrac{\partial h_{k}}{\partial x_{j}}\\
+\dfrac{\partial f}{\partial x_{i_{1}}} &amp; \cdots &amp; \dfrac{\partial f}{\partial x_{i_{k}}} &amp; \dfrac{\partial f}{\partial x_{j}}
+\end{pmatrix}.
+\]</span>
+depend on <span class="math inline">\(f\)</span> and <span class="math inline">\(i\)</span>. As a result, we can re-use the <span class="math inline">\((k-1\times k-1)\)</span>-matrix consisting of the first <span class="math inline">\(k-1\)</span> rows and columns of <span class="math inline">\(\partial_{\mathbf{h}, \mathbf{i}, j} f\)</span>.
+In the implementation, we can receive as an argument, from the previous round of induction, this <span class="math inline">\((k-1\times k-1)\)</span>-matrix which will be used throughout that round. We still, however, need to compute the determinant for every new <span class="math inline">\(s_k\)</span>.</p>
+<p>We will now present, from <span class="citation">(Gabrielov and Vorobjov <a href="#ref-gv1995" role="doc-biblioref">1995</a>, Theorem 1)</span>, the proof that this algorithm does indeed produce smooth strata and also that it terminates.</p>
+<p>This algorithm is doubly exponential in the number of variables. For the polynomial case, the complexity is
+<span class="math display">\[
+s^n (d+1)^{2^{O(n)}}
+\]</span>
+where <span class="math inline">\(s\)</span> is the number of polynomials <span class="math inline">\(f_1,\ldots,f_s\)</span>, <span class="math inline">\(d\)</span> is their degree and <span class="math inline">\(n\)</span> is the number of variables. <span class="citation">(Gabrielov and Vorobjov <a href="#ref-gv1995" role="doc-biblioref">1995</a>, Section 4)</span></p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references hanging-indent">
+<div id="ref-gv1995">
+<p>Gabrielov, Andrei, and Nicolai Vorobjov. 1995. “Complexity of Stratification of Semi-Pfaffian Sets.” <em>Discrete &amp; Computational Geometry</em> 14 (1): 71–91.</p>
+</div>
+<div id="ref-le2010">
+<p>Lê Loi, Ta, and others. 2010. “Lecture 2: Stratifications in O-Minimal Structures.” In <em>The Japanese-Australian Workshop on Real and Complex Singularities-Jarcs Iii</em>, 31–39.</p>
+</div>
+<div id="ref-thom1969">
+<p>Thom, René. 1969. “Ensembles et Morphismes Stratifiés.” <em>Bulletin of the American Mathematical Society</em> 75: 240–84. <a href="https://api.semanticscholar.org/CorpusID:123199335">https://api.semanticscholar.org/CorpusID:123199335</a>.</p>
+</div>
+<div id="ref-whitney1965">
+<p>Whitney, Hassler. 1965. “Tangents to an Analytic Variety.” In <em>Hassler Whitney Collected Papers</em>, 537–90. Springer.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="4-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="6-quasi-affine-cells.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.bath.ac.uk/hb581/thesis/edit/master/02-smooth-stratification.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

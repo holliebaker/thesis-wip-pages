@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Background: CAD | Thesis</title>
+  <meta name="description" content="Hollie Baker’s thesis" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Background: CAD | Thesis" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Hollie Baker’s thesis" />
+  <meta name="github-repo" content="holliebaker/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Background: CAD | Thesis" />
+  
+  <meta name="twitter:description" content="Hollie Baker’s thesis" />
+  
+
+<meta name="author" content="Hollie" />
+
+
+<meta name="date" content="2024-01-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2.2-definition-of-the-cad.html"/>
+<link rel="next" href="4-intro.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Thesis: CAD with monotone cells</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Cylindrical algebraic decompositions with monotone cells</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1.1-things-to-explain.html"><a href="1.1-things-to-explain.html"><i class="fa fa-check"></i><b>1.1</b> Things to explain</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-bits-and-pieces.html"><a href="2-bits-and-pieces.html"><i class="fa fa-check"></i><b>2</b> Bits and Pieces</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><a href="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><i class="fa fa-check"></i><b>2.1</b> Definitions that don’t quite fit anywhere else.</a></li>
+<li class="chapter" data-level="2.2" data-path="2.2-definition-of-the-cad.html"><a href="2.2-definition-of-the-cad.html"><i class="fa fa-check"></i><b>2.2</b> Definition of the CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-background-cad.html"><a href="3-background-cad.html"><i class="fa fa-check"></i><b>3</b> Background: CAD</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="3-background-cad.html"><a href="3-background-cad.html#constructing-a-cad"><i class="fa fa-check"></i><b>3.0.1</b> Constructing a CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-intro.html"><a href="4-intro.html"><i class="fa fa-check"></i><b>4</b> Introduction</a></li>
+<li class="chapter" data-level="5" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html"><i class="fa fa-check"></i><b>5</b> Smooth Stratification</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html#description-of-the-algorithm"><i class="fa fa-check"></i><b>5.0.1</b> Description of the algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-quasi-affine-cells.html"><a href="6-quasi-affine-cells.html"><i class="fa fa-check"></i><b>6</b> Quasi-affine cells</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><a href="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><i class="fa fa-check"></i><b>6.1</b> Computing the smooth 2-dimensional locus of <span class="math inline">\(V\)</span></a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><a href="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><i class="fa fa-check"></i><b>6.2</b> Ensuring that every cell is the graph of a quasi-affine map</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-monotone-cells.html"><a href="7-monotone-cells.html"><i class="fa fa-check"></i><b>7</b> Monotone Cells</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html"><i class="fa fa-check"></i><b>7.1</b> Two-dimensional semi-monotone sectors</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#semi-monotone-sets"><i class="fa fa-check"></i><b>7.1.1</b> Two-dimensional semi-monotone sets</a></li>
+<li class="chapter" data-level="7.1.2" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:lagrange-refinement"><i class="fa fa-check"></i><b>7.1.2</b> Finding the critical points of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:sub-cad"><i class="fa fa-check"></i><b>7.1.3</b> Working with sub-decompositions above a 0-cell</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html"><i class="fa fa-check"></i><b>7.2</b> Two-dimensional monotone sections</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-1-2-le-j-le-alpha---1"><i class="fa fa-check"></i><b>7.2.1</b> Case 1: <span class="math inline">\(2 \le j \le \alpha - 1\)</span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-2-alpha-1-le-j-le-n"><i class="fa fa-check"></i><b>7.2.2</b> Case 2: <span class="math inline">\(\alpha + 1 \le j \le n\)</span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#critical-points-of-the-top-and-bottom-of-c"><i class="fa fa-check"></i><b>7.2.3</b> Critical points of the top and bottom of <span class="math inline">\(C\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html"><i class="fa fa-check"></i><b>7.3</b> Implementation Details</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html#algorithm"><i class="fa fa-check"></i><b>7.3.1</b> Algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="7.4-computing-the-refinements.html"><a href="7.4-computing-the-refinements.html"><i class="fa fa-check"></i><b>7.4</b> Computing the refinements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-frontier-condition.html"><a href="8-frontier-condition.html"><i class="fa fa-check"></i><b>8</b> Frontier Condition</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="8.1-geteral-frontier-algorithm.html"><a href="8.1-geteral-frontier-algorithm.html"><i class="fa fa-check"></i><b>8.1</b> Geteral Frontier Algorithm</a></li>
+<li class="chapter" data-level="8.2" data-path="8.2-lazard-3d.html"><a href="8.2-lazard-3d.html"><i class="fa fa-check"></i><b>8.2</b> Lazard 3d</a></li>
+<li class="chapter" data-level="8.3" data-path="8.3-geteralisation-of-lazard.html"><a href="8.3-geteralisation-of-lazard.html"><i class="fa fa-check"></i><b>8.3</b> Geteralisation of Lazard</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-notation.html"><a href="9-notation.html"><i class="fa fa-check"></i><b>9</b> Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="background-cad" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Background: CAD<a href="3-background-cad.html#background-cad" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><span class="citation">Collins (<a href="#ref-collins1975" role="doc-biblioref">1975</a>)</span> introduced both the concept of cylindrical algebraic decomposition and an algorithm to construct one, such that each cell has constant sign on a set of input polynomials.</p>
+<p>First, we will present the formal definition of a cylindrical cell and cylindrical decomposition, closely following <span class="citation">Basu, Gabrielov, and Vorobjov (<a href="#ref-bgv15" role="doc-biblioref">2015</a>)</span> and then explain how a cylindrical decomposition can be constructed (following <span class="citation">Coste (<a href="#ref-coste2000" role="doc-biblioref">2000</a>)</span>, who presents a simple and concise description).</p>
+<div class="{,definition}">
+<p>Cylindrical cells are defined by induction on <span class="math inline">\(n\ge 1\)</span>. Each cylindrical cell <span class="math inline">\(C\)</span> is a connected definable subset of <span class="math inline">\(\mathbb{R}^n\)</span> with an <em>index</em>
+<span class="math display">\[
+(i_1,\ldots,i_n) \in \{0,1\}^n.
+\]</span></p>
+<ul>
+<li><p>When <span class="math inline">\(n = 1\)</span>, a <span class="math inline">\((0)\)</span>-cell (section cell) is a point <span class="math inline">\(c \in \mathbb{R}\)</span> and a <span class="math inline">\((1)\)</span>-cell (sector cell) is an open interval: <span class="math inline">\((a,b)\)</span>, <span class="math inline">\((-\infty,b)\)</span>, <span class="math inline">\((a,\infty)\)</span>, <span class="math inline">\((-\infty,\infty)\)</span> where <span class="math inline">\(a,b\in \mathbb{R}\)</span>.</p></li>
+<li><p>When <span class="math inline">\(n &gt; 1\)</span>, suppose that <span class="math inline">\((i_1,\ldots,i_{n-1})\)</span>-cells are already defined and let <span class="math inline">\(C&#39;\)</span> be one of these cells.
+An <span class="math inline">\((i_1,\ldots,i_{n-1},0)\)</span>-cell (section cell) is the graph of a continuous definable function <span class="math inline">\(f : C&#39; \to \mathbb{R}\)</span>.
+An - <span class="math inline">\((i_1,\ldots,i_{n-1},1)\)</span>-cell (sector cell) is a subset of the cylinder <span class="math inline">\(C&#39; \times \mathbb{R}\)</span>, either
+<span class="math display">\[
+\begin{aligned}
+\{ (\mathbf{x},t) &amp;\mid \mathbf{x} \in C&#39;, f(\mathbf{x}) &lt; t &lt; g(\mathbf{x})\},\\
+\{ (\mathbf{x},t) &amp;\mid \mathbf{x} \in C&#39;, -\infty &lt; t &lt; g(\mathbf{x})\},\\
+\{ (\mathbf{x},t) &amp;\mid \mathbf{x} \in C&#39;, f(\mathbf{x}) &lt; t &lt; \infty\},\\
+\{ (\mathbf{x},t) &amp;\mid \mathbf{x} \in C&#39;, t \in \mathbb{R}\}
+\end{aligned}
+\]</span>
+where <span class="math inline">\(f,g : C&#39; \to \mathbb{R}\)</span> are continuous definable functions such that <span class="math inline">\(f(\mathbf{x}) &lt; g(\mathbf{x})\)</span> for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>.</p></li>
+</ul>
+</div>
+<div class="{,definition}">
+<p>Let <span class="math inline">\(S \subset \mathbb{R}^n\)</span> be a definable subset of <span class="math inline">\(\mathbb{R}^n\)</span> and define the <em>frontier of <span class="math inline">\(S\)</span></em>
+<span class="math display">\[
+\fr(S) := {\operatorname{cl} \left( ( \right)}S) \setminus S,
+\]</span>
+where <span class="math inline">\({\operatorname{cl} \left( ( \right)}S)\)</span> is the closure of <span class="math inline">\(S\)</span> in euclidean topology.</p>
+</div>
+<p>If <span class="math inline">\(C \subset \mathbb{R}^n\)</span> is a cylinrical cell, then it will be convenient to partition <span class="math inline">\(\fr(C)\)</span> into three subsets: the top (denoted <span class="math inline">\(C_t\)</span>), bottom (denoted <span class="math inline">\(C_B\)</span>) and side wall (denoted <span class="math inline">\(C_W\)</span>).</p>
+<p>First suppose that <span class="math inline">\(C\)</span> is a sector <span class="math inline">\((i,1,\ldots,i_{n-1},1)\)</span>-cell and let <span class="math inline">\(C&#39; := {\operatorname{proj}_{\mathbb{R}^{n-1}}}(C)\)</span>. If <span class="math inline">\(C\)</span> is bounded from below by a continuous function <span class="math inline">\(f : C&#39; \to \mathbb{R}\)</span>, then <span class="math inline">\(C_B\)</span> is the graph of <span class="math inline">\(f\)</span>. Similarly, if <span class="math inline">\(C\)</span> is bounded from above by the graph of a continuous function <span class="math inline">\(g : C&#39; \to \mathbb{R}\)</span>, then <span class="math inline">\(C_T\)</span> is the graph of <span class="math inline">\(g\)</span>. It is clear that the top and bottom of a cylindrical sector cell (if non-empty) are alwyas cylindrical section cells.</p>
+<p>Now let <span class="math inline">\(C\)</span> be an <span class="math inline">\((i_1,\ldots,i_{k},0,\ldots,0)\)</span>-cell, where <span class="math inline">\(i_{k}=1\)</span>, and <span class="math inline">\(C&#39; := {\operatorname{proj}_{\mathbb{R}^{k}}}(C)\)</span>. Since <span class="math inline">\(C&#39;\)</span> is a sector cell, <span class="math inline">\(C&#39;_B\)</span> and <span class="math inline">\(C&#39;_T\)</span> are cylindrical section cells. The bottom <span class="math inline">\(C_B\)</span> of <span class="math inline">\(C\)</span> is the pre-image of <span class="math inline">\(C&#39;_B\)</span> by the projection map <span class="math inline">\({\operatorname{proj}_{\mathbb{R}^{k}}}\vert_{{\operatorname{cl} \left( ( \right)}C)}\)</span> and the top <span class="math inline">\(C_T\)</span> of <span class="math inline">\(C\)</span> is the pre-image of <span class="math inline">\(C&#39;_T\)</span> by the projection map <span class="math inline">\({\operatorname{proj}_{\mathbb{R}^{k-1}}}\vert_{{\operatorname{cl} \left( ( \right)}C)}\)</span>. Instead of pre-images, it might be simpler to think of <span class="math inline">\(C_B\)</span> as the semialgebraic set <span class="math inline">\({\operatorname{cl} \left( ( \right)}C) \cap (C&#39;_B \times \mathbb{R}^{n - k + 1})\)</span> and <span class="math inline">\(C_T\)</span> as the semialgebraic set <span class="math inline">\({\operatorname{cl} \left( ( \right)}C) \cap (C&#39;_T \times \mathbb{R}^{n - k + 1})\)</span>. Note that <span class="math inline">\(C_B\)</span> and <span class="math inline">\(C_T\)</span> may not be cylindrical cells. Indeed, they may fail to be graphs of continuous functions (see Example <strong>TODO</strong>).</p>
+<p>For both section and sector cells, let the side wall, <span class="math inline">\(C_W\)</span>, be <span class="math inline">\({\operatorname{cl} \left( ( \right)}C) \setminus (C_B \cup C_T)\)</span>. Of course, there is no gaurantee at all that <span class="math inline">\(C_W\)</span> will be (a union of) cylindrical cells.</p>
+<div class="{,definition}">
+<p>A cylindrical decomposition (not necessarily algebraic) is defined by induction on <span class="math inline">\(n \ge 0\)</span>.</p>
+<ul>
+<li><p>When <span class="math inline">\(n = 0\)</span>, the unique cylindrical decomposition of <span class="math inline">\(\mathbb{R}^0\)</span> is the unique point in <span class="math inline">\(\mathbb{R}^0\)</span>.</p></li>
+<li><p>When <span class="math inline">\(n &gt; 0\)</span>: Let <span class="math inline">\(\cal D\)</span> be a partition of <span class="math inline">\(\mathbb{R}^n\)</span> into cylindrical cells.
+Define <span class="math inline">\(\cal D&#39;\)</span> to be the set of all projections <span class="math inline">\(C&#39; := {\operatorname{proj}_{\mathbb{R}^{n-1}}}(C)\)</span> for all <span class="math inline">\(C\)</span> in <span class="math inline">\(\cal D\)</span>.
+<span class="math inline">\(\cal D\)</span> is a cylindrical decomposition of <span class="math inline">\(\mathbb{R}^n\)</span> if <span class="math inline">\(\cal D&#39;\)</span> is a cylindrical decomposition of <span class="math inline">\(\mathbb{R}^{n-1}\)</span>. We call <span class="math inline">\(\cal D&#39;\)</span> the *decomposion of <span class="math inline">\(\mathbb{R}^{n-1}\)</span> induced by <span class="math inline">\(\cal D\)</span>.</p></li>
+</ul>
+</div>
+<p>Less formally, a decomposition <span class="math inline">\(\cal D\)</span> of <span class="math inline">\(\mathbb{R}^n\)</span> is cylindrical if the projection of any two cells of <span class="math inline">\(\cal D\)</span> onto <span class="math inline">\(\mathbb{R}^{n-1}\)</span> is either disjoint or coincides.</p>
+<ul>
+<li>maybe move this to just before the coste bit
+::: {.remark}
+A cylindrical decomposition is called <em>algebraic</em> if every cell is a semialgebraic set. We will only be working with cylindrical algebraic decompositions (CADs).
+:::</li>
+</ul>
+<div class="definition">
+<p><span id="def:unlabeled-div-4" class="definition"><strong>Definition 3.1  </strong></span>Let <span class="math inline">\(S \subset \mathbb{R}^n\)</span> be a definable set. A cylindrical decomposition <span class="math inline">\(\cal D\)</span> is compatible with <span class="math inline">\(S\)</span> if every cell <span class="math inline">\(C\)</span> of <span class="math inline">\(\cal D\)</span> is either a subset of <span class="math inline">\(S\)</span> or disjoint from <span class="math inline">\(S\)</span>.</p>
+</div>
+<p>— {.definition}
+A cylindrical decomposition <span class="math inline">\(\cal E\)</span> is called a refinement of <span class="math inline">\(\cal D\)</span> if <span class="math inline">\(\cal E\)</span> is compatible with every cell of <span class="math inline">\(\cal D\)</span>. I.e., every cell of <span class="math inline">\(\cal D\)</span> is a union of cells in the refinement <span class="math inline">\(\cal E\)</span>.
+—-</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 3.2  </strong></span>Let <span class="math inline">\(\mathbf{F} := (f_1,\ldots,f_s) \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a set of polynomials with integer coefficients. A CAD <span class="math inline">\(\cal D\)</span> is called sign-invariant with respect to <span class="math inline">\(\mathbf{F}\)</span> (or <span class="math inline">\(\mathbf{F}\)</span>-invariant) if every cell <span class="math inline">\(C\)</span> of <span class="math inline">\(\cal D\)</span> has constant sign (either <span class="math inline">\(&gt; 0\)</span>, <span class="math inline">\(&lt; 0\)</span> or <span class="math inline">\(= 0\)</span>) on every polynomial in <span class="math inline">\(\mathbf{F}\)</span>. (Here <span class="math inline">\(\mathbf{F}\)</span> is called the set of input polynomials.)</p>
+</div>
+<div id="constructing-a-cad" class="section level3 hasAnchor" number="3.0.1">
+<h3><span class="header-section-number">3.0.1</span> Constructing a CAD<a href="3-background-cad.html#constructing-a-cad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a set of polynomials with integer coefficients. We will now describe the algorithm due to <span class="citation">Collins (<a href="#ref-collins1975" role="doc-biblioref">1975</a>)</span> for constructing an <span class="math inline">\(\mathbf{F}\)</span>-invariant CAD of <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p>Let us begin with just one polynomial <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_n]\)</span>. We want to partition <span class="math inline">\(\mathbb{R}^{n-1}\)</span> into connected semialgebraic sets <span class="math inline">\(C&#39;\)</span> such that, for all $ C’ $,, <span class="math inline">\(f(\mathbf{x},x_n)\)</span> has constant degree and a constant number of roots. Thus, the roots of <span class="math inline">\(f(\mathbf{x},x_n\)</span> form the section cells of the cylinder <span class="math inline">\(C&#39; \times \mathbb{R}\)</span>.</p>
+<div class="{,proposition}">
+<p>Let <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a polynomial in <span class="math inline">\(n\)</span> variables with integer coefficients, <span class="math inline">\(C&#39; \subset \mathbb{R}^{n-1}\)</span> be a connected semialgebraic set and <span class="math inline">\(k \le d \in \mathbb{N}\)</span> such that, for every point <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>, the univariate polynomial <span class="math inline">\(f(\mathbf{x},x_n) \in \mathbb{A}[x_n]\)</span> has degree <span class="math inline">\(d\)</span> and exactly <span class="math inline">\(k\)</span> distinct (complex) roots in <span class="math inline">\(C&#39;\)</span>. Then Then there are <span class="math inline">\(\ell \le k\)</span> distinct definable functions <span class="math inline">\(\psi_1,\ldots,\psi_\ell : C&#39; \to \mathbb{R}\)</span> such that, for every <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>, the set of real roots of <span class="math inline">\(f(\mathbf{x},x_n)\)</span> is exactly <span class="math inline">\(\{ \psi_1(\mathbf{x}, \ldots, \psi_\ell(\mathbf{x}) \}\)</span>. Moreover, the multiplicity of each of each root is constant.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>The argument relies on the “continuity of roots”:</p>
+<blockquote>
+<p>Fix <span class="math inline">\(\mathbf{c} \in C&#39;\)</span> and let <span class="math inline">\(z_1,\ldots,z_k\)</span> be the distinct roots of <span class="math inline">\(f(\mathbf{c},x_n)\)</span> with multiplicities <span class="math inline">\(m_1,\ldots,m_k\)</span>.
+Choose <span class="math inline">\(\varepsilon &gt; 0\)</span> small enough that the open discs <span class="math inline">\(D(z_i,\varepsilon) z_i \subset \mathbb{C}\)</span> (center <span class="math inline">\(z_i\)</span>, radius $) are disjoint. If <span class="math inline">\(\mathbf{b} \in C\)</span> is sufficiently close to <span class="math inline">\(\mathbf{c}\)</span>, then the polynomial <span class="math inline">\(f(\mathbf{b}, x_n)\)</span> has exactly <span class="math inline">\(m_i\)</span> roots, counted with multiplicities, in <span class="math inline">\(D(z_i,\varepsilon)\)</span> for <span class="math inline">\(1\le i \le k\)</span>.</p>
+</blockquote>
+<p>Since <span class="math inline">\(f(\mathbf{b},x_n)\)</span> has k distinct complex roots, and <span class="math inline">\(d = m_1,\ldots,m_k\)</span> complex roots counted with multiplicities, it follows that each <span class="math inline">\(D(z_i,\varepsilon)\)</span> contains exactly one root, call it <span class="math inline">\(\zeta_i\)</span>, of <span class="math inline">\(f(\mathbf{b},x_n)\)</span> with multiplicity <span class="math inline">\(m_i\)</span>.
+If <span class="math inline">\(z_i\)</span> is real, then <span class="math inline">\(\zeta_i\)</span> is real, otherwise the complex conjugate of <span class="math inline">\(\zeta_i\)</span> would be another root of <span class="math inline">\(f(\mathbf{b},x_n)\)</span> in the disc <span class="math inline">\(D(Z-i,\varepsilon)\)</span>.
+If <span class="math inline">\(z_i\)</span> is complex then <span class="math inline">\(\zeta_i\)</span> is also complex, since the conjugation of every point in <span class="math inline">\(D(z_i, \varepsilon)\)</span> lies outside <span class="math inline">\(D(z_i, \varepsilon)\)</span>, forming another disc <span class="math inline">\(D(\overline{z_i}, \varepsilon)\)</span>.
+It follows that, if <span class="math inline">\(\mathbf{b} \in C&#39;\)</span> is close enough to <span class="math inline">\(\mathbf{c}\)</span>, then <span class="math inline">\(f(\mathbf{c},x_n)\)</span> has the same number of real roots as <span class="math inline">\(f(\mathbf{c},x_n)\)</span>. Since <span class="math inline">\(C&#39;\)</span> is connected, <span class="math inline">\(f(\mathbf{x},x_n)\)</span> has the same number of real roots at every point <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>. Let the number of distinct real roots be <span class="math inline">\(\ell\)</span>.
+Define <span class="math inline">\(\psi_i(\mathbf{x}) : C&#39; \to \mathbb{R}\)</span> to be the continuous (by making <span class="math inline">\(\varepsilon\)</span> small enough) definable function sending <span class="math inline">\(\mathbf{x} \in C&#39;\)</span> to the <span class="math inline">\(i\)</span>-th (in ascending order) real root of <span class="math inline">\(f(\mathbf{x},x_n)\)</span>. It follows from the connectedness of <span class="math inline">\(C&#39;\)</span> that each <span class="math inline">\(\psi_i\)</span> has constant multiplicity.
+Observe that the graph of each <span class="math inline">\(\psi_i\)</span> can be expressed by a first-order Boolean formula (using existential quantifiers to express each of the <span class="math inline">\(\ell\)</span> roots of <span class="math inline">\(f(\mathbf{x},x_n)\)</span>, and an equality condition to pick out the <span class="math inline">\(i\)</span>-th root). It follows that the graph of each <span class="math inline">\(\psi_i\)</span> is a semialgebraic set.</p>
+</div>
+<p>To extend this result to several polynomials, we have to be careful that the graphs corresponding to the roots of the polynomials do not cross one another. This gives us the property that <span class="math inline">\(\psi_i(\mathbf{x}) &lt; \psi_{i+1}(\mathbf{x})\)</span> for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span> which is needed for the cylindrical structure.
+This property is called delineability.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-7" class="proposition"><strong>Proposition 3.1  </strong></span>Let <span class="math inline">\(f,g \in \mathbb{Z}[x_1,\ldots,x_n]\)</span>, <span class="math inline">\(C&#39; \subset \mathbb{R}^{n-1}\)</span> such that the degree and number of roots of <span class="math inline">\(f(\mathbf{x},x_n)\)</span> and <span class="math inline">\(g(\mathbf{x},x_n)\)</span> is constant, and the degree of the GCD of <span class="math inline">\(f(\mathbf{x},x_n)\)</span> and <span class="math inline">\(g(\mathbf{x},x_n)\)</span> is constant for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>.
+Let <span class="math inline">\(\phi,\psi : C&#39; \to \mathbb{R}\)</span> be continuous definable functions such that <span class="math inline">\(f(\mathbf{x},\phi(\mathbf{x})) = 0\)</span> and <span class="math inline">\(g(\mathbf{x},\psi(\mathbf{x})) = 0\)</span> for all <span class="math inline">\(\mathbf{x} in C&#39;\)</span>. If there exists <span class="math inline">\(\mathbf{c} \in C&#39;\)</span> such that <span class="math inline">\(\phi(\mathbf{c}) = \psi(\mathbf{c})\)</span>, then <span class="math inline">\(\phi(\mathbf{x}) = \psi(\mathbf{x})\)</span> for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-8" class="proof"><em>Proof</em>. </span>We use the same method of proof as in the previous proposition.
+For an arbitrary element <span class="math inline">\(\mathbf{c} of C&#39;\)</span>, let <span class="math inline">\(z_1 = \phi(\mathbf{c}) = \psi(\mathbf{x}), \ldots, z_k\)</span> be the distinct roots in <span class="math inline">\(\mathbb{C}\)</span> of the product
+<span class="math display">\[
+f(\mathbf{c},x_n) g(\mathbf{c},x_n)
+\]</span>
+(<span class="math inline">\(fg = 0\)</span> if either <span class="math inline">\(f=0\)</span> or <span class="math inline">\(g=0\)</span>).
+Let <span class="math inline">\(m_i\)</span> (resp <span class="math inline">\(p_i\)</span>) be the multiplicity of <span class="math inline">\(z_i\)</span> as a root of <span class="math inline">\(f(\mathbf{x},x_n)\)</span> (resp. <span class="math inline">\(g(\mathbf{x}, x_n)\)</span>) where multiplicity zero indicates that <span class="math inline">\(z_i\)</span> is not a root.
+Thedegree of <span class="math inline">\(gcd(f(\mathbf{x}, x_n), g(\mathbf{x}, x_n))\)</span> is <span class="math inline">\(\min(m_1,p_1) + \cdots + \min(m_k,p_k)\)</span> and each <span class="math inline">\(z_i\)</span> has multiplicity <span class="math inline">\(\min(m_i,p_i)\)</span> as a root of this GCD.
+Choose <span class="math inline">\(\varepsilon &gt; 0\)</span> small enough that the discs <span class="math inline">\(D(z_i,\varepsilon)\)</span> are disjoint.
+For each <span class="math inline">\(\mathbf{b} \in C&#39;\)</span> close enough to <span class="math inline">\(\mathbf{c}\)</span>, each disc contains a root of multiplicity <span class="math inline">\(m_i\)</span> of <span class="math inline">\(f(\mathbf{b}, x_n)\)</span> and a root of multiplicity <span class="math inline">\(p_i\)</span> of <span class="math inline">\(g(\mathbf{b}, x_n)\)</span>. Since the degree of the GCD of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> (evaluated at any <span class="math inline">\(\mathbf{x}\)</span> in <span class="math inline">\(C&#39;\)</span>) is equal to <span class="math inline">\(\min(m_1,p_1) + \cdots + \min(m_k,p_k)\)</span>, the GCD must have one root of multiplicity <span class="math inline">\(\min(m_i,p_i)\)</span> in each disc <span class="math inline">\(D(z_i,\varepsilon)\)</span> such that <span class="math inline">\(\min(m_i,p_i) &gt; 0\)</span>.
+In particular, it follows that <span class="math inline">\(\phi(\mathbf{b}) = \psi(\mathbf{b})\)</span>. Since <span class="math inline">\(C\)</span> is connected, this equality holds for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>.</p>
+</div>
+<p>We now have algebraic conditions on properties of the polynomials in <span class="math inline">\(\mathbf{F}\)</span> which allow us to construct stacks above cylindrical cells <span class="math inline">\(C&#39; \subset \mathbb{R}^{n-1}\)</span>.
+We can ensure that these conditions on polynomials hold by computing principal subresultant coefficients. more precisely <span class="math inline">\(f\)</span> has a fixed number of complex roots over a set where <span class="math inline">\(\operatorna{psrc}_i(f,f&#39;)\)</span> is either zero or nonzero and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> has constant GCD over a when <span class="math inline">\(\operatorna{psrc}_i(f, g)\)</span> is either zero or nonzero, as long as the degrees of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are fixed.
+In the case that, for some values of <span class="math inline">\()x_1,\ldots,x_n) \in \mathbb{R}^{n-1}\)</span> the leading coefficients of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> vanish, we must use the principal subresultant coefficients of the reductum (also called truncated polynomial, obtained by deleting the leading term) of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-9" class="definition"><strong>Definition 3.3  </strong></span>Consider <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_n]\)</span> as a univariate polynomial in <span class="math inline">\(x_n\)</span> with coefficients in <span class="math inline">\(\mathbb{Z}[x_1,\ldots,x_{n-1}]\)</span>. Denote by <span class="math inline">\(\operatorna{lc}{f}\)</span> the leading coefficient of <span class="math inline">\(f\)</span>, and <span class="math inline">\(\operatorna{red}(f}\)</span> the reductum of <span class="math inline">\(f\)</span>.</p>
+<p>Let <span class="math inline">\(\mathbf{f} \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span>. We define the projection operator, <span class="math inline">\(\operatorname{proj}(\mathbf{F})\)</span> as follows:</p>
+<ul>
+<li><p>Let <span class="math inline">\(d := \deg(f_i)\)</span>. If <span class="math inline">\(d &gt; 1\)</span>, then <span class="math inline">\(\operatorname{proj}(f_1,\ldots,f_i,\ldots,f_s)\)</span> contains
+<span class="math display">\[
+\operatorna{psrc}_k(f_i, \partial f_i / \partial x_n)
+\]</span>
+for all <span class="math inline">\(1\le k \le d\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(d := \min(\deg(f_i), \deg(f_j))\)</span>. If <span class="math inline">\(d &gt; 0\)</span>, then <span class="math inline">\(\operatorname{proj}(f_1,\ldots,f_i,\ldots,f_j,\ldots,f_s)\)</span> contains
+<span class="math display">\[
+\operatorna{psrc}_j(f_i, f_j)
+\]</span>
+for all <span class="math inline">\(1 \le k \le d\)</span>.</p></li>
+<li><p>If <span class="math inline">\(\deg(f_i) &gt; 0\)</span> and <span class="math inline">\(\operatorna{lc}(f_i)\)</span> is non-constant, then <span class="math inline">\(\operatorname{proj}(f_1,\ldots,f_i,\ldots,f_s)\)</span> contains
+<span class="math display">\[
+\operatorna{lc}(f_i) \text[ and } \operatorname{proj}(f_1,\ldots,\operatorna{red}(f_i),\ldots,f_n).
+\]</span></p></li>
+</ul>
+</div>
+<p>The following theorem follows immediately from the results just proved.</p>
+<div class="{,theorem}">
+<p>Let <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a family of polynomials and let <span class="math inline">\(C&#39;\)</span> be a connected <span class="math inline">\(\operatorname{proj}(\mathbf{F})\)</span>-invariant semialgebraic subset of <span class="math inline">\(\mathbb{R}^{n-1}\)</span> – an <span class="math inline">\((i_1,\ldots,i_{n-1})\)</span>-cell.
+Then there exist continuous definable functions
+<span class="math display">\[
+\psi_1,\ldots, psi_\ell : C&#39; \to \mathbb{R}
+\]</span>
+such that for all <span class="math inline">\(\mathbf{x} \in C&#39;\)</span>, the set <span class="math inline">\(\{ \psi_i(\mathbf{x}), \ldots, \psi_k(\mathbf{x}) \}\)</span> coincides with the real roots of polynomials in <span class="math inline">\(\mathbf{F}\)</span>, defining the <span class="math inline">\((i_1,\ldots,i_{n-1},0)\)</span>-cells in the cylinder <span class="math inline">\(C&#39; \times \mathbb{R}\)</span> and <span class="math inline">\(\{ -\infty &lt; t &lt; \psi_1(\mathbf{x}), \ldots, \psi_i(\mathbf{x}) &lt; t &lt; \psi_{i+1}(\mathbf{x}), \ldots, \psi_k(\mathbf{x}) &lt; t &lt; \infty \}\)</span> are the <span class="math inline">\((i_1,\ldots, i_{n-1},1)\)</span>-cells in the cylinder <span class="math inline">\(C&#39; \times \mathbb{R}\)</span>.</p>
+</div>
+<p>Suppose we have constructed a CAD of <span class="math inline">\(\mathbb{R}^{k-1}\)</span> which is sign-invariant with respect to <span class="math inline">\(\operatorname{proj}_{k-1}(\mathbf{F})\)</span>. Then the preceding theorem can be used to construct a CAD of <span class="math inline">\(\mathbb{R}^{k}\)</span> which is sign-invariant with respect to <span class="math inline">\(\operatorname{proj}_{k}(\mathbf{F})\)</span>. More precisely, the CAD is constructed by taking successive projections until the set of projection polynomials is in <span class="math inline">\(\mathbb{Z}[x_1]\)</span>. <span class="math inline">\((0)\)</span>-cells of <span class="math inline">\(\mathbb{R}^1\)</span> are the roots of these polynomials, while <span class="math inline">\((1)\)</span>-cells are the open intervals in between them. “For <span class="math inline">\(1\le k \le n-1\)</span>, $lifting” is then performed. I.e., for each cell <span class="math inline">\(C&#39;\)</span> ^k$, the roots of polynomials in the projection set of <span class="math inline">\(\mathbf{F}\)</span> onto <span class="math inline">\(\mathbb{R}^{k+1}\)</span> are computed. See, e.g., the appendix of <span class="citation">Schwartz and Sharir (<a href="#ref-pianomovers1983" role="doc-biblioref">1983</a>)</span> for details of how this is done.</p>
+<p>Since Collins published his CAD algorithm in 1975, many variations of the projection operator have been proposed, most of which aim to minimise the number of polynomials appearing in <span class="math inline">\(\operatorname{proj}_{k-1}(\mathbf{F})\)</span>, so as to make the algorithm more efficient in practice, while preserving the cylindrical structure.
+<span class="citation">(<span class="citeproc-not-found" data-reference-id="collins75"><strong>???</strong></span>)</span> observed that, in dimension <span class="math inline">\(2\)</span>, if the set <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1,x_2]\)</span> of input polynomials is squarefree and pairwise relatively prime, then it is sufficient to include in <span class="math inline">\(\operatorname{proj}(\mathbf{F})\)</span> only the leading coefficients, resultants and discriminants of pairs of polynomials in <span class="math inline">\(\mathbf{F}\)</span>. <span class="citation">McCallum (<a href="#ref-mccallum1988" role="doc-biblioref">1988</a>)</span> then proved that a similar construction is possible in dimension <span class="math inline">\(3\)</span>. Later, <span class="citation">(<span class="citeproc-not-found" data-reference-id="collins1998"><strong>???</strong></span>)</span> improved upon his previous work by extending this result to arbitrary dimension, so long as the set of input polynomials is well oriented.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-10" class="definition"><strong>Definition 3.4  </strong></span>Let <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1, \ldots, x_n]\)</span> be a set of polynomials and denote by <span class="math inline">\(\operatorna{prim}(\mathbf{F})\)</span> the set of all primitive parts of <span class="math inline">\(\mathbf{F}\)</span>
+<span class="math inline">\(\mathbf{F}\)</span> is called well-oriented if, when <span class="math inline">\(n &gt; 1\)</span>,</p>
+<ul>
+<li><p>for each element <span class="math inline">\(f \in \operatorna{prim}(A)\)</span>, <span class="math inline">\(f(\mathbf{x},y) = 0\)</span> for all <span class="math inline">\(y\in \mathbb{R}\)</span> for only finitely many points <span class="math inline">\(\mathbf{x} \in \mathbb{R}^{n-1}\)</span>.</p></li>
+<li><p><span class="math inline">\(\operatorname{proj}(\mathbf{F})\)</span> is well-oriented.</p></li>
+</ul>
+</div>
+<p><span class="citation">Brown (<a href="#ref-brown2001" role="doc-biblioref">2001</a>)</span> then observed that even more polynomials can be discarded, resulting in the “reduced McCallum projection operator”, which is commonly used in practice.</p>
+<p><span class="citation">(<span class="citeproc-not-found" data-reference-id="collins1988"><strong>???</strong></span>)</span> proves that every cell a CAD constructed to be <span class="math inline">\(\mathbf{F}\)</span>-invariant (where <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span> is a well-oriented set of polynomials) is an analytic submanifold <span class="citation">(<span class="citeproc-not-found" data-reference-id="collins1988"><strong>???</strong></span> Theorems 2.2.3 and 2.2.4)</span>. An analytic submanifold of <span class="math inline">\(\mathbb{R}^n\)</span> of dimension <span class="math inline">\(k\)</span> is a non-empty subset <span class="math inline">\(S \subset \mathbb{R}^n\)</span> that “looks locally like <span class="math inline">\(\mathbb{R}^s\)</span>”.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 3.5  </strong></span><span class="math inline">\(S \subset \mathbb{R}^n\)</span> is an analytic submanifold if, for every point <span class="math inline">\(\mathbf{x} \in S\)</span>, there is an analytic coordinate system about <span class="math inline">\(\mathbf{x}\)</span> with respect to which <span class="math inline">\(S\)</span> is locally the intersection of <span class="math inline">\(n-s\)</span> coordinate hyperplanes.</p>
+</div>
+<div class="{,remark}">
+<p>Let <span class="math inline">\(\mathbf{F} \subset \mathbb{Z}[x_1,\ldots,x_n]\)</span> be a well-oriented set of polynomials. If we want an <span class="math inline">\(\mathbf{F}\)</span>-invariant CAD such that every cell is an analytic submanifold (smooth subset of <span class="math inline">\(\mathbb{R}^n\)</span>), it suffices to use McCallum’s projection operator.</p>
+</div>
+<p><span class="citation">(<span class="citeproc-not-found" data-reference-id="mccallum2019"><strong>???</strong></span>)</span> completed the proof that Lazard’s projection operator is valid and also proved, without the condition on well-orientedness of input polynomials, that every cell of a sign-invariant CAD constructed using Lazard’s projection operator is an analytic submanifold.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references hanging-indent">
+<div id="ref-bgv15">
+<p>Basu, Saugata, Andrei Gabrielov, and Nicolai Vorobjov. 2015. “Triangulations of Monotone Families I: Two-Dimensional Families.” <em>Proceedings of the London Mathematical Society</em> 111 (5): 1013–51.</p>
+</div>
+<div id="ref-brown2001">
+<p>Brown, Christopher W. 2001. “Improved Projection for Cylindrical Algebraic Decomposition.” <em>Journal of Symbolic Computation</em> 32 (5): 447–65.</p>
+</div>
+<div id="ref-collins1975">
+<p>Collins, George E. 1975. “Quantifier Elimination for Real Closed Fields by Cylindrical Algebraic Decompostion.” In <em>Automata Theory and Formal Languages</em>, 134–83. Springer.</p>
+</div>
+<div id="ref-coste2000">
+<p>Coste, Michel. 2000. “An Introduction to Semialgebraic Geometry.” Citeseer.</p>
+</div>
+<div id="ref-mccallum1988">
+<p>McCallum, Scott. 1988. “An Improved Projection Operation for Cylindrical Algebraic Decomposition of Three-Dimensional Space.” <em>Journal of Symbolic Computation</em> 5 (1): 141–61. <a href="https://doi.org/https://doi.org/10.1016/S0747-7171(88)80010-5">https://doi.org/https://doi.org/10.1016/S0747-7171(88)80010-5</a>.</p>
+</div>
+<div id="ref-pianomovers1983">
+<p>Schwartz, Jacob T, and Micha Sharir. 1983. “On the ‘Piano Movers’ Problem. II. General Techniques for Computing Topological Properties of Real Algebraic Manifolds.” <em>Advances in Applied Mathematics</em> 4 (3): 298–351.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2.2-definition-of-the-cad.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-intro.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.bath.ac.uk/hb581/thesis/edit/master/01-2-cad.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

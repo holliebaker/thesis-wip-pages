@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.2 Definition of the CAD | Thesis</title>
+  <meta name="description" content="Hollie Baker’s thesis" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.2 Definition of the CAD | Thesis" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Hollie Baker’s thesis" />
+  <meta name="github-repo" content="holliebaker/thesis" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.2 Definition of the CAD | Thesis" />
+  
+  <meta name="twitter:description" content="Hollie Baker’s thesis" />
+  
+
+<meta name="author" content="Hollie" />
+
+
+<meta name="date" content="2024-01-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="2.1-definitions-that-dont-quite-fit-anywhere-else..html"/>
+<link rel="next" href="3-background-cad.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Thesis: CAD with monotone cells</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Cylindrical algebraic decompositions with monotone cells</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="1.1-things-to-explain.html"><a href="1.1-things-to-explain.html"><i class="fa fa-check"></i><b>1.1</b> Things to explain</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-bits-and-pieces.html"><a href="2-bits-and-pieces.html"><i class="fa fa-check"></i><b>2</b> Bits and Pieces</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><a href="2.1-definitions-that-dont-quite-fit-anywhere-else..html"><i class="fa fa-check"></i><b>2.1</b> Definitions that don’t quite fit anywhere else.</a></li>
+<li class="chapter" data-level="2.2" data-path="2.2-definition-of-the-cad.html"><a href="2.2-definition-of-the-cad.html"><i class="fa fa-check"></i><b>2.2</b> Definition of the CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-background-cad.html"><a href="3-background-cad.html"><i class="fa fa-check"></i><b>3</b> Background: CAD</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="3-background-cad.html"><a href="3-background-cad.html#constructing-a-cad"><i class="fa fa-check"></i><b>3.0.1</b> Constructing a CAD</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-intro.html"><a href="4-intro.html"><i class="fa fa-check"></i><b>4</b> Introduction</a></li>
+<li class="chapter" data-level="5" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html"><i class="fa fa-check"></i><b>5</b> Smooth Stratification</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="5-smooth-stratification.html"><a href="5-smooth-stratification.html#description-of-the-algorithm"><i class="fa fa-check"></i><b>5.0.1</b> Description of the algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="6-quasi-affine-cells.html"><a href="6-quasi-affine-cells.html"><i class="fa fa-check"></i><b>6</b> Quasi-affine cells</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><a href="6.1-computing-the-smooth-2-dimensional-locus-of-v.html"><i class="fa fa-check"></i><b>6.1</b> Computing the smooth 2-dimensional locus of <span class="math inline">\(V\)</span></a></li>
+<li class="chapter" data-level="6.2" data-path="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><a href="6.2-ensuring-that-every-cell-is-the-graph-of-a-quasi-affine-map.html"><i class="fa fa-check"></i><b>6.2</b> Ensuring that every cell is the graph of a quasi-affine map</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="7-monotone-cells.html"><a href="7-monotone-cells.html"><i class="fa fa-check"></i><b>7</b> Monotone Cells</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html"><i class="fa fa-check"></i><b>7.1</b> Two-dimensional semi-monotone sectors</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#semi-monotone-sets"><i class="fa fa-check"></i><b>7.1.1</b> Two-dimensional semi-monotone sets</a></li>
+<li class="chapter" data-level="7.1.2" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:lagrange-refinement"><i class="fa fa-check"></i><b>7.1.2</b> Finding the critical points of <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\psi\)</span></a></li>
+<li class="chapter" data-level="7.1.3" data-path="7.1-two-dimensional-semi-monotone-sectors.html"><a href="7.1-two-dimensional-semi-monotone-sectors.html#sec:sub-cad"><i class="fa fa-check"></i><b>7.1.3</b> Working with sub-decompositions above a 0-cell</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html"><i class="fa fa-check"></i><b>7.2</b> Two-dimensional monotone sections</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-1-2-le-j-le-alpha---1"><i class="fa fa-check"></i><b>7.2.1</b> Case 1: <span class="math inline">\(2 \le j \le \alpha - 1\)</span></a></li>
+<li class="chapter" data-level="7.2.2" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#case-2-alpha-1-le-j-le-n"><i class="fa fa-check"></i><b>7.2.2</b> Case 2: <span class="math inline">\(\alpha + 1 \le j \le n\)</span></a></li>
+<li class="chapter" data-level="7.2.3" data-path="7.2-two-dimensional-monotone-sections.html"><a href="7.2-two-dimensional-monotone-sections.html#critical-points-of-the-top-and-bottom-of-c"><i class="fa fa-check"></i><b>7.2.3</b> Critical points of the top and bottom of <span class="math inline">\(C\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html"><i class="fa fa-check"></i><b>7.3</b> Implementation Details</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="7.3-implementation-details.html"><a href="7.3-implementation-details.html#algorithm"><i class="fa fa-check"></i><b>7.3.1</b> Algorithm</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="7.4-computing-the-refinements.html"><a href="7.4-computing-the-refinements.html"><i class="fa fa-check"></i><b>7.4</b> Computing the refinements</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-frontier-condition.html"><a href="8-frontier-condition.html"><i class="fa fa-check"></i><b>8</b> Frontier Condition</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="8.1-geteral-frontier-algorithm.html"><a href="8.1-geteral-frontier-algorithm.html"><i class="fa fa-check"></i><b>8.1</b> Geteral Frontier Algorithm</a></li>
+<li class="chapter" data-level="8.2" data-path="8.2-lazard-3d.html"><a href="8.2-lazard-3d.html"><i class="fa fa-check"></i><b>8.2</b> Lazard 3d</a></li>
+<li class="chapter" data-level="8.3" data-path="8.3-geteralisation-of-lazard.html"><a href="8.3-geteralisation-of-lazard.html"><i class="fa fa-check"></i><b>8.3</b> Geteralisation of Lazard</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="9-notation.html"><a href="9-notation.html"><i class="fa fa-check"></i><b>9</b> Notation</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="definition-of-the-cad" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Definition of the CAD<a href="2.2-definition-of-the-cad.html#definition-of-the-cad" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Projection to the induced decomposition vs construction of stacks above cylindrical cells.</p>
+<p>…</p>
+<blockquote>
+<p>A section cell <span class="math inline">\(C\)</span> is the graph, in <span class="math inline">\(\mathbb{R}^n\)</span>, of a continuous definable function <span class="math inline">\(h : C&#39; \to \mathbb{R}\)</span>, where <span class="math inline">\(C&#39;\)</span> is a cylindrical cell in <span class="math inline">\(\mathbb{R}^{n-1}\)</span>.</p>
+</blockquote>
+<p>In reality, we are given a set of <em>level-<span class="math inline">\(n\)</span> projection factors</em> and <span class="math inline">\(C\)</span> is a real root of a polynomial <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_n]\)</span>, viewed as a polynomial in <span class="math inline">\(\mathbb{Z}[x_1,\ldots,x_{n-1}][x_n]\)</span>. By the construction of CAD, <span class="math inline">\(f\)</span> has <span class="math inline">\(k\)</span> real roots at every point <span class="math inline">\(\mathbf{c} \in C&#39;\)</span>.</p>
+<p>In some situations, the former representation (with functions) is more convenient (than the latter, with roots).</p>
+<p>Observe that it is easy to convert from the function representation to the root representation. Indeed, let <span class="math inline">\(C\subset R^{n}\)</span> be the graph of
+<span class="math display">\[h : C&#39; \to \mathbb{R}\]</span>
+where <span class="math inline">\(C&#39; \subset \mathbb{R}^{n-1}\)</span> is an <span class="math inline">\((i_1,\ldots,i_{n-1})\)</span>-cell in <span class="math inline">\(\mathbb{R}^{n-1}\)</span>. For every <span class="math inline">\(\mathbf{c} \in C&#39;\)</span>, the graph <span class="math inline">\(C\)</span> can be written as a root of
+<span class="math display">\[
+f := h(\mathbf{c}) - x_n \in Z[x_1,\ldots,x_n]
+\]</span>
+The specific root of <span class="math inline">\(f\)</span> such that <span class="math inline">\(x_n = h(\mathbf{c})\)</span> can be isolated, by Thom’s lemma, by adding some sign conditions on partial derivatives of <span class="math inline">\(g\)</span>.</p>
+<p>Now let <span class="math inline">\(f \in \mathbb{Z}[x_1,\ldots,x_{n-1}][x_n]\)</span> be a polynomial in <span class="math inline">\(x_n\)</span> and <span class="math inline">\(C&#39; \subset \mathbb{R}^{n-1}\)</span> be a <span class="math inline">\((i_1,\ldots,i_{n-1})\)</span>-cell of <span class="math inline">\(\mathbb{R}^{n-1}\)</span>. Then the cylinder <span class="math inline">\(C&#39; \times \mathbb{R}\)</span> (“above” <span class="math inline">\(C&#39;\)</span>) contains a family of section cells
+<span class="math display">\[
+{\cal C} := \{ (\mathbf{c},x_n) \mid \mathbf{c} \in C&#39;, f(\mathbf{c},x_n) = 0 \}.
+\]</span>
+The family <span class="math inline">\(\cal C\)</span> consists of <span class="math inline">\(k\)</span> connected semialgebraic sets, corresponding to the <span class="math inline">\(k\)</span> section cells on which <span class="math inline">\(f = 0\)</span>.
+Suppose we want to represent one of these section cells <span class="math inline">\(C \in {\cal C}\)</span> as the graph of <span class="math inline">\(h : C&#39; \to \mathbb{R}\)</span>. By Thom’s lemma, we can write
+<span class="math display">\[
+C = \{ (\mathbf{c},x_n) \mid \mathbf{c} \in C&#39;, f(\mathbf{c},x_n) = 0, g_1(\mathbf{c},x_n) &gt; 0, \ldots, g_k(\mathbf{c},x_n) \}
+\]</span>
+where <span class="math inline">\(g_1,\ldots,g_k\)</span> are partial derivatives of <span class="math inline">\(f\)</span>.</p>
+<p><span class="math inline">\(C\)</span> is a semialgebraic set, therefore <span class="math inline">\(h\)</span> is certainly a definable function.
+But, is <span class="math inline">\(h\)</span> a polynomial? The answer is no. This can be seen using a simple example.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 2.1  </strong></span>Let <span class="math inline">\(D \subset \mathbb{R}^2\)</span> be the unit disc, a semialgebraic set defined by a quantifier-free Boolean formula
+<span class="math display">\[
+\{ x^2 + y^2 &lt; 1 \}.
+\]</span>
+Construct a CAD of <span class="math inline">\(\mathbb{R}^2\)</span> compatible with <span class="math inline">\(D\)</span> in which <span class="math inline">\(D\)</span> is a single sector cell. Observe that the top of <span class="math inline">\(D\)</span>,
+<span class="math display">\[
+D_T = \{ -1 &lt; x &lt; 1, y &gt; 0, x^2 + y^2 = 0 \}
+\]</span>
+and
+<span class="math display">\[
+D&#39; := {\operatorname{proj}_{\mathbb{R}^{1}}}(D) = \{ -1 &lt; x &lt; 1 \}.
+\]</span>
+It is clear that <span class="math inline">\(D_T\)</span> is a semialgebraic (and therefore a definable) set, so there exists a definable function
+<span class="math display">\[
+h : D&#39; \to \mathbb{R}
+\]</span>
+such that <span class="math inline">\(D_T\)</span> is the graph of <span class="math inline">\(h\vert_{D&#39;}\)</span>. Indeed, let
+<span class="math display">\[
+h(x) = +\sqrt{1-x^2}.
+\]</span>
+This is clearly not a polynomial.</p>
+</div>
+<p>In addition, it’s clear that not every definable set is the graph of a definable map. Indeed, consider
+<span class="math display">\[
+C := \{ x^2 + y^2 = 1 \}
+\]</span>
+and
+<span class="math display">\[
+C&#39; := {\operatorname{proj}_{\mathbb{R}^{1}}}(C) = \{ -1 \le x \le 1 \}.
+\]</span>
+Both <span class="math inline">\(C\)</span> and <span class="math inline">\(C&#39;\)</span> are clearly definable, but there is no map from <span class="math inline">\(C&#39; \to \mathbb{R}\)</span> having <span class="math inline">\(C\)</span> as its graph. Indeed, at <span class="math inline">\(x=0\)</span>, this map should have images <span class="math inline">\(-1\)</span> and <span class="math inline">\(1\)</span>, which contradicts the definition of a map. However, in the case of a cylindrical section cell, the map <span class="math inline">\(h\)</span> always exists by definition.</p>
+<p>Therefore, when working with cylindrical section cells, the map <span class="math inline">\(h : C&#39; \to \mathbb{R}\)</span> may be used, but algorithms will work solely with polynomials <span class="math inline">\(f \in \mathbb{Z}{x_1,\ldots,x_{n-1}}[x_n]\)</span> from the level-<span class="math inline">\(n\)</span> projection factor set.</p>
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="2.1-definitions-that-dont-quite-fit-anywhere-else..html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-background-cad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.bath.ac.uk/hb581/thesis/edit/master/01-1-bits-and-pieces.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["thesis.pdf", "thesis.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
